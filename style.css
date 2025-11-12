@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+:root {
+    /* Paleta base*/
+    --principal-bg: #f0f2f5;
+    --secundario-bg: #ffffff; 
+    --texto: #333333; 
+    --descricoes: #6a6a6a;
+    --destaque: #e0a39c;
+    --destaque-escuro: #c0847f; 
+    --borda: #e0e0e0;
+    --sombra: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--principal-bg);
+    color: var(--texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+    box-sizing: border-box; 
+    padding: 20px; 
+}
+
+.container {
+    background-color: var(--secundario-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--sombra); 
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+    margin-bottom: 10px;
+    font-weight: 600; 
+}
+
+p {
+    color: var(--descricoes);
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
+
+form {
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--texto);
+    font-size: 0.9em;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 24px); 
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    color: var(--texto);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 3px rgba(224, 163, 156, 0.2); 
+    outline: none;
+}
+
+input[type="submit"] {
+    background-image: linear-gradient(to right, var(--destaque), var(--destaque-escuro)); 
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(224, 163, 156, 0.4); 
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 20px rgba(224, 163, 156, 0.6);
+}
+
+p.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--destaque-escuro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--destaque);
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    text-align: center; 
+    font-size: 0.85em;
+    color: var(--descricoes);
+    border-top: 1px solid var(--borda);
+    padding-top: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.icon {
+    display: block; 
+    width: 48px; 
+    height: 48px; 
+    margin: 0 auto 20px auto; 
+    color: var(--destaque);
+}
+
+/* css pra página principal */
+body.principal .container {
+    max-width: 600px;
+}
+
+body.principal h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+body.principal p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
